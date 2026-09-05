@@ -8,4 +8,6 @@ const socket = io(
     }
 );
 
+console.log("BACKEND_SOCKET_URL:", import.meta.env.BACKEND_SOCKET_URL);
+
 export default socket;

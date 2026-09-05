@@ -5,6 +5,8 @@ const api = axios.create({
     withCredentials: true,
 });
 
+console.log("BACKEND_API_URL:", import.meta.env.BACKEND_API_URL);
+
 let authFailureHandler = null;
 
 export const setAuthFailureHandler = (handler) => {
