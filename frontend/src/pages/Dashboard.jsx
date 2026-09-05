@@ -23,7 +23,7 @@ import api from "../services/api";
 
 const Dashboard = () => {
 
-    console.log('this is dashboard of updated repo. i am prashant');
+    console.log('this is dashboard of updated repo.');
 
     const navigate =
         useNavigate();
