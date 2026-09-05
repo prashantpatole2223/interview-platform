@@ -28,15 +28,15 @@ export const login = async (req, res) => {
 
         res.cookie("accessToken", data.accessToken, {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict",
+            secure: true,
+            sameSite: "none",
             maxAge: 15 * 60 * 1000
         });
 
         res.cookie("refreshToken", data.refreshToken, {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict",
+            secure: true,
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000
         });
 
@@ -63,14 +63,14 @@ export const refresh = async (req, res, next) => {
         res.cookie("accessToken", accessToken, {
             httpOnly: true,
             secure: true,
-            sameSite: "strict",
+            sameSite: "none",
             maxAge: 15 * 60 * 1000
         });
 
         res.cookie("refreshToken", refreshToken, {
             httpOnly: true,
             secure: true,
-            sameSite: "strict",
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000
         });
 
@@ -91,14 +91,14 @@ export const logout = async (req, res) => {
 
         res.clearCookie("accessToken", {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict"
+            secure: true,
+            sameSite: "none"
         });
 
         res.clearCookie("refreshToken", {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict"
+            secure: true,
+            sameSite: "none"
         });
 
         return res.status(200).json({
@@ -120,14 +120,14 @@ export const logoutAll = async (req, res) => {
 
         res.clearCookie("accessToken", {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict"
+            secure: true,
+            sameSite: "none"
         });
 
         res.clearCookie("refreshToken", {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict"
+            secure: true,
+            sameSite: "none"
         });
 
         return res.status(200).json({
