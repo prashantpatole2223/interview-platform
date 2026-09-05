@@ -1,0 +1,8 @@
+node_modules/
+.env
+server/.env
+client/.env
+temp/
+projec
+projectStructure.txt
+status_codes.txt
