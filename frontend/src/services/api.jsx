@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: import.meta.env.BACKEND_API_URL,
+    baseURL: import.meta.env.VITE_BACKEND_API_URL,
     withCredentials: true,
 });
 
-console.log("BACKEND_API_URL:", import.meta.env.BACKEND_API_URL);
+console.log("BACKEND_API_URL:", import.meta.env.VITE_BACKEND_API_URL);
 
 let authFailureHandler = null;
 
