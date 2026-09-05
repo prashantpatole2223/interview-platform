@@ -10,7 +10,7 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB is connected"))
 .catch((err) => console.log(err));
 
-const PORT = 8084;
+const PORT = process.env.PORT || 8084;
 
 /*
    Create normal HTTP server manually
@@ -22,7 +22,7 @@ const server = createServer(app);
 */
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173",
+        origin: process.env.CLIENT_URL,
         credentials: true
     }
 });
