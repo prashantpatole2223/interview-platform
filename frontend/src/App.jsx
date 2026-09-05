@@ -4,6 +4,10 @@ import {
     useLocation
 } from "react-router-dom";
 
+console.log(" APP LOADED");
+    console.log("Current URL:", window.location.href);
+    console.log("Current pathname:", window.location.pathname);
+    console.log("Current location:", location);
 
 import Navbar from "./components/Navbar/Navbar";
 
