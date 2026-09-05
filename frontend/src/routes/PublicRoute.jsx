@@ -2,7 +2,7 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 
-const ProtectedRoute = () => {
+const PublicRoute = () => {
   const { isAuthenticated, loading } = useAuth();
 
   if (loading) {
@@ -16,4 +16,4 @@ const ProtectedRoute = () => {
   return <Outlet />;
 }
 
-export default ProtectedRoute;
+export default PublicRoute;
